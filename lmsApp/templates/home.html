@@ -1,0 +1,131 @@
+{% extends "base.html" %} {% load humanize %} {% load customfilter %} {% block pageContent %}
+<style type="text/css">
+    .bg-for-c{
+        box-shadow: 0 0 3px 2px rgb(22, 132, 208);
+        color: gray;
+        background: #fff;
+        transition: .5s ease;
+
+        
+    }
+    .bg-for-c:hover{
+        background: rgb(22,132,208);
+        background: linear-gradient(90deg, rgba(22,132,208,1) 0%, rgba(44,182,218,1) 39%, rgba(0,212,255,1) 100%);
+        color: #ffff;
+    }
+    .text-for-c{
+        color: rgb(22,132,208);
+    }
+</style>
+<!--Section: Content-->
+<section class="">
+    <h2 class="fw-bolder"><span style="color: grey;">Xush Kelibsiz,</span> <span class="text-for-c">{{request.user.first_name}}&nbsp;{{request.user.last_name}}!</span></h2>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 px-1 pb-2 ">
+            <div class="card card-default rounded-1 bg-for-c">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row mx-0 w-100 align-items-center">
+                            <div class="col-3">
+                                <i class="fs-1 fa fa-th-list"></i>
+                            </div>
+                            <div class="col-9">
+                                <h1 class="text-end">{{categories|intcomma}}</h2>
+                            </div>
+                            <div class="col-12 text-end"><b>Faol Kategoriyalar</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 px-1 pb-2 ">
+            <div class="card card-default rounded-1 bg-for-c bg-opacity-75">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row mx-0 w-100 align-items-center">
+                            <div class="col-3">
+                                <i class="fs-1 fa fa-list"></i>
+                            </div>
+                            <div class="col-9">
+                                <h1 class="text-end">{{sub_categories|intcomma}}</h2>
+                            </div>
+                            <div class="col-12 text-end"><b>Faol 2-Kategoriyalar</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 px-1 pb-2 ">
+            <div class="card card-default rounded-1 bg-for-c bg-opacity-75">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row mx-0 w-100 align-items-center">
+                            <div class="col-3">
+                                <i class="fs-1 fa fa-user-friends"></i>
+                            </div>
+                            <div class="col-9">
+                                <h1 class="text-end">{{students|intcomma}}</h2>
+                            </div>
+                            <div class="col-12 text-end"><b>O'quvchilar</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 px-1 pb-2 ">
+            <div class="card card-default rounded-1 bg-for-c bg-opacity-75">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row mx-0 w-100 align-items-center">
+                            <div class="col-3">
+                                <i class="fs-1 fa fa-book"></i>
+                            </div>
+                            <div class="col-9">
+                                <h1 class="text-end">{{books|intcomma}}</h2>
+                            </div>
+                            <div class="col-12 text-end"><b>Kitoblar</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 px-1 pb-2 ">
+            <div class="card card-default rounded-1 bg-for-c">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row mx-0 w-100 align-items-center">
+                            <div class="col-3">
+                                <i class="fs-1 fa fa-book-open"></i>
+                            </div>
+                            <div class="col-9">
+                                <h1 class="text-end">{{pending|intcomma}}</h2>
+                            </div>
+                            <div class="col-12 text-end"><b>Qaytarilmagan Kitoblar</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 px-1 pb-2 ">
+            <div class="card card-default rounded-1 bg-for-c">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row mx-0 w-100 align-items-center">
+                            <div class="col-3">
+                                <i class="fs-1 fa fa-book-open"></i>
+                            </div>
+                            <div class="col-9">
+                                <h1 class="text-end">{{transactions|intcomma}}</h2>
+                            </div>
+                            <div class="col-12 text-end"><b>Umumiy olingan kitoblar</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+</div> {% endblock pageContent %} {% block ScriptBlock %}
+<script>
+</script>
+{% endblock ScriptBlock %}
