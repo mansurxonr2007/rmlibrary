@@ -58,7 +58,11 @@ WSGI_APPLICATION = 'django_lms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': "postgres",
+        "HOST":"aws-0-ap-northeast-2.pooler.supabase.com",
+        "USER":"postgres.xbjzvosveoilvxtditjz",
+        "PASSWORD":"M@nsurx0n.2007",
+        "PORT":"5432"
     }
 }
 
